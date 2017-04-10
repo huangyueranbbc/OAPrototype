@@ -7,13 +7,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#F2F2F2"
         android:orientation="vertical">
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="202dp"
             android:layout_marginBottom="4dp"
+            android:background="@drawable/pic_list_item_bg"
             android:orientation="vertical">
 
             <TextView
@@ -30,6 +32,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#ffffff"
                 android:paddingBottom="5dp"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
@@ -64,6 +67,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#ffffff"
                 android:paddingBottom="5dp"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
@@ -98,6 +102,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#ffffff"
                 android:paddingBottom="5dp"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
@@ -132,6 +137,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#ffffff"
                 android:paddingBottom="5dp"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
@@ -164,26 +170,23 @@
             </RelativeLayout>
 
             <TextView
+                android:id="@+id/tv_loadmore1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|right"
                 android:layout_marginRight="20dp"
                 android:text="更多"
+                android:onClick="loadMore"
                 android:textColor="#A19FA3"
                 android:textSize="14dp" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.2dp"
-                android:layout_marginTop="5dp"
-                android:background="#A7A7A7"></View>
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="202dp"
             android:layout_marginBottom="4dp"
+            android:background="@drawable/pic_list_item_bg"
             android:orientation="vertical">
 
             <TextView
@@ -193,7 +196,7 @@
                 android:paddingBottom="5dp"
                 android:paddingLeft="26dp"
                 android:paddingTop="5dp"
-                android:text="最新公告"
+                android:text="会议安排"
                 android:textColor="#ffffff"
                 android:textSize="20dp" />
 
@@ -209,7 +212,7 @@
                     android:id="@+id/tv5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="周一例会取消"
+                    android:text="开发新产品"
                     android:textColor="#A19FA3"
                     android:textSize="18dp" />
 
@@ -243,7 +246,7 @@
                     android:id="@+id/tv6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="周一例会取消"
+                    android:text="开发新产品"
                     android:textColor="#A19FA3"
                     android:textSize="18dp" />
 
@@ -277,7 +280,7 @@
                     android:id="@+id/tv7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="周一例会取消"
+                    android:text="开发新产品"
                     android:textColor="#A19FA3"
                     android:textSize="18dp" />
 
@@ -311,7 +314,7 @@
                     android:id="@+id/tv8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="周一例会取消"
+                    android:text="开发新产品"
                     android:textColor="#A19FA3"
                     android:textSize="18dp" />
 
@@ -334,26 +337,23 @@
             </RelativeLayout>
 
             <TextView
+                android:id="@+id/tv_loadmore2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|right"
                 android:layout_marginRight="20dp"
                 android:text="更多"
+                android:onClick="loadMore"
                 android:textColor="#A19FA3"
                 android:textSize="14dp" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.2dp"
-                android:layout_marginTop="5dp"
-                android:background="#A7A7A7"></View>
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="202dp"
             android:layout_marginBottom="4dp"
+            android:background="@drawable/pic_list_item_bg"
             android:orientation="vertical">
 
             <TextView
@@ -363,7 +363,7 @@
                 android:paddingBottom="5dp"
                 android:paddingLeft="26dp"
                 android:paddingTop="5dp"
-                android:text="最新公告"
+                android:text="最新公文"
                 android:textColor="#ffffff"
                 android:textSize="20dp" />
 
@@ -379,7 +379,7 @@
                     android:id="@+id/tv9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="周一例会取消"
+                    android:text="组装.doc"
                     android:textColor="#A19FA3"
                     android:textSize="18dp" />
 
@@ -413,7 +413,7 @@
                     android:id="@+id/tv10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="周一例会取消"
+                    android:text="算法大全.pdf"
                     android:textColor="#A19FA3"
                     android:textSize="18dp" />
 
@@ -447,7 +447,7 @@
                     android:id="@+id/tv11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="周一例会取消"
+                    android:text="销售报告.docx"
                     android:textColor="#A19FA3"
                     android:textSize="18dp" />
 
@@ -481,7 +481,7 @@
                     android:id="@+id/tv12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="周一例会取消"
+                    android:text="时间安排表.doc"
                     android:textColor="#A19FA3"
                     android:textSize="18dp" />
 
@@ -504,26 +504,23 @@
             </RelativeLayout>
 
             <TextView
+                android:id="@+id/tv_loadmore3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|right"
                 android:layout_marginRight="20dp"
                 android:text="更多"
+                android:onClick="loadMore"
                 android:textColor="#A19FA3"
                 android:textSize="14dp" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.2dp"
-                android:layout_marginTop="5dp"
-                android:background="#A7A7A7"></View>
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="202dp"
             android:layout_marginBottom="4dp"
+            android:background="@drawable/pic_list_item_bg"
             android:orientation="vertical">
 
             <TextView
@@ -533,7 +530,7 @@
                 android:paddingBottom="5dp"
                 android:paddingLeft="26dp"
                 android:paddingTop="5dp"
-                android:text="最新公告"
+                android:text="备忘录"
                 android:textColor="#ffffff"
                 android:textSize="20dp" />
 
@@ -674,6 +671,7 @@
             </RelativeLayout>
 
             <TextView
+                android:id="@+id/tv_loadmore4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|right"
@@ -681,13 +679,6 @@
                 android:text="更多"
                 android:textColor="#A19FA3"
                 android:textSize="14dp" />
-            v
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.2dp"
-                android:layout_marginTop="5dp"
-                android:background="#A7A7A7"></View>
 
         </LinearLayout>
 

@@ -38,9 +38,9 @@ public class FragmentSample extends Fragment {
                              @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_sample, container, false);
         tabView = (TabView) view.findViewById(R.id.tabView);
-        tabView.setImageViewTextViewMargin(-10); // 设置图片和文字距离
+        tabView.setImageViewTextViewMargin(1); // 设置图片和文字距离
         tabView.setTextViewSelectedColor(Color.parseColor("#57BBF5")); //设置字体颜色
-        tabView.setImageViewHeight(TabViewUtil.dp2px(getContext(), 35));
+        tabView.setImageViewHeight(TabViewUtil.dp2px(getContext(), 32));
         init();
         return view;
     }
@@ -58,7 +58,9 @@ public class FragmentSample extends Fragment {
             tabViewChildList.add(tabViewChild03);
             tabViewChildList.add(tabViewChild04);
             //end add data
-            tabView.setTabViewDefaultPosition(2);
+            // 默认展示页面
+            tabView.setTabViewDefaultPosition(0);
+            // TODO tabView.setTabViewBackgroundColor(Color.YELLOW);  // 设置背景颜色 只能在添加后设置
             tabView.setTabViewChild(tabViewChildList, getChildFragmentManager());
             tabView.setOnTabChildClickListener(new TabView.OnTabChildClickListener() {
                 @Override
@@ -76,7 +78,8 @@ public class FragmentSample extends Fragment {
             tabViewChildList.add(tabViewChild02);
             tabViewChildList.add(tabViewChild04);
             //end add data
-            tabView.setTabViewDefaultPosition(2);
+            tabView.setTabViewDefaultPosition(0);
+            //TODO tabView.setTabViewBackgroundColor(Color.YELLOW);  // 设置背景颜色 只能在添加后设置
             tabView.setTabViewChild(tabViewChildList, getChildFragmentManager());
             tabView.setOnTabChildClickListener(new TabView.OnTabChildClickListener() {
                 @Override

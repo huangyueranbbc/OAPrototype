@@ -1,6 +1,7 @@
 package system.oa.com.oaprototype.fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -15,6 +16,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import system.oa.com.oaprototype.AlertActivity;
 import system.oa.com.oaprototype.R;
 import system.oa.com.oaprototype.utils.UIUtils;
 import system.oa.com.oaprototype.view.MyListView;
@@ -63,13 +65,14 @@ public final class SendFileFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         ListView listView = new MyListView(UIUtils.getContext());
+        listView.setDivider(null);
+        listView.setDividerHeight(1);
         // TODO 静态数据
         data = new ArrayList();
         data.add(1);
         data.add(2);
 
         listView.setAdapter(new MyAdapter(getContext()));
-
         return listView;
     }
 
@@ -108,6 +111,15 @@ public final class SendFileFragment extends Fragment {
                 holder.createTime = (TextView) convertView.findViewById(R.id.createTime);
                 holder.receiveStatus = (TextView) convertView.findViewById(R.id.receiveStatus);
                 holder.pendStatus = (TextView) convertView.findViewById(R.id.pendStatus);
+                convertView.findViewById(R.id.tv_loadmore).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        TextView tv1 = (TextView) v;
+                        Intent intent = new Intent(getActivity(), AlertActivity.class);
+                        intent.putExtra("var1",tv1.getText().toString());
+                        startActivity(intent);
+                    }
+                });
 
 
                 convertView.setTag(holder); //绑定ViewHolder对象

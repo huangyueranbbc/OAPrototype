@@ -2,6 +2,6 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:drawable="@drawable/list_item_bg_pressed" android:state_pressed="true" />
-    <item android:drawable="@drawable/list_item_bg_normal" />
+    <item android:drawable="@drawable/pic_list_item_bg" />
 
 </selector>

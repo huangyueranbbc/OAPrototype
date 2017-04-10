@@ -1,23 +1,22 @@
 package system.oa.com.oaprototype.fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.LinearLayout.LayoutParams;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import system.oa.com.oaprototype.AlertActivity;
 import system.oa.com.oaprototype.R;
 import system.oa.com.oaprototype.utils.UIUtils;
 import system.oa.com.oaprototype.view.MyListView;
@@ -28,6 +27,7 @@ import system.oa.com.oaprototype.view.MyListView;
 public final class ReceiveFileFragment extends Fragment {
     private static final String KEY_CONTENT = "TestFragment:Content";
     private List data;
+    private View view;
 
     public static ReceiveFileFragment newInstance(String content) {
         ReceiveFileFragment fragment = new ReceiveFileFragment();
@@ -63,18 +63,10 @@ public final class ReceiveFileFragment extends Fragment {
      */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        TextView text = new TextView(getActivity());
-        text.setGravity(Gravity.CENTER);
-        text.setText(mContent);
-        text.setTextSize(20 * getResources().getDisplayMetrics().density);
-        text.setPadding(20, 20, 20, 20);
-
-        LinearLayout layout = new LinearLayout(getActivity());
-        layout.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT));
-        layout.setGravity(Gravity.CENTER);
-        layout.addView(text);
-
         ListView listView = new MyListView(UIUtils.getContext());
+        listView.setDivider(null);
+        listView.setDividerHeight(1);
+
         // TODO 静态数据
         data = new ArrayList();
         data.add(1);
@@ -118,6 +110,15 @@ public final class ReceiveFileFragment extends Fragment {
                 holder.fileName = (TextView) convertView.findViewById(R.id.file_name);
                 holder.sendUser = (TextView) convertView.findViewById(R.id.sendUser);
                 holder.createTime = (TextView) convertView.findViewById(R.id.createTime);
+                convertView.findViewById(R.id.tv_edit).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        TextView tv1 = (TextView) v;
+                        Intent intent = new Intent(getActivity(), AlertActivity.class);
+                        intent.putExtra("var1",tv1.getText().toString());
+                        startActivity(intent);
+                    }
+                });
 
                 convertView.setTag(holder); //绑定ViewHolder对象
             } else {

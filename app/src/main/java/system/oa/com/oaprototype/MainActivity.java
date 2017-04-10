@@ -17,4 +17,5 @@ public class MainActivity extends AppCompatActivity {
         fragmentSample = new FragmentSample(isAdmin);
         getSupportFragmentManager().beginTransaction().add(R.id.frame, fragmentSample).show(fragmentSample).commit();
     }
+
 }

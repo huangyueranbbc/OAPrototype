@@ -16,42 +16,27 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="#F2F2F2"
     android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/ll_top"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="44dp"
+        android:background="#F2F2F2"
         android:orientation="horizontal">
-
-        <Button
-            android:layout_width="30dp"
-            android:layout_height="35dp"
-            android:layout_weight="1"
-            android:background="@drawable/button_yuanjiao"
-            android:layout_marginLeft="14dp"
-            android:text="接收文件"
-            android:textColor="#B6DAFC" />
 
         <TextView
             android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
             android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:paddingTop="10dp"
-            android:text="发送文件"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:text="接收文件"
             android:textColor="#000000"
-            android:textSize="20dp" />
-
-        <Button
-            android:layout_width="30dp"
-            android:layout_height="35dp"
-            android:layout_weight="1"
-            android:background="@drawable/button_yuanjiao"
-            android:layout_marginRight="14dp"
-            android:text="发送文件"
-            android:textColor="#B6DAFC" />
+            android:textSize="22dp" />
 
     </LinearLayout>
 
@@ -59,7 +44,7 @@
         android:id="@+id/indicator"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="5dip"
+        android:paddingBottom="10dip"
         android:paddingLeft="10dip"
         android:paddingRight="10dip"
         android:paddingTop="5dip" />
@@ -68,11 +53,13 @@
         android:id="@+id/v_bottom"
         android:layout_width="match_parent"
         android:layout_height="0.2dp"
+        android:layout_marginBottom="-6dp"
         android:background="#929292"></View>
 
     <android.support.v4.view.ViewPager
         android:id="@+id/pager"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
+
 </LinearLayout>

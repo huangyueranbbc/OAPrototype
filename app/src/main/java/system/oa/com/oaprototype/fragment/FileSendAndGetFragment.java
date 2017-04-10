@@ -48,10 +48,10 @@ public class FileSendAndGetFragment extends BaseFragment {
                 Log.i(TAG, "onPageSelected: " + position);
                 if (position == 0) {
                     TextView textView = (TextView) view.findViewById(R.id.tv_title);
-                    textView.setText("发送文件");
+                    textView.setText("接收文件");
                 } else {
                     TextView textView = (TextView) view.findViewById(R.id.tv_title);
-                    textView.setText("接收文件");
+                    textView.setText("发送文件");
                 }
             }
 

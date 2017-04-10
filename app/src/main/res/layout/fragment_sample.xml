@@ -5,6 +5,7 @@
 
     <com.ycl.tabview.library.TabView
         android:id="@+id/tabView"
+        android:background="@color/default_title_indicator_footer_color"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 

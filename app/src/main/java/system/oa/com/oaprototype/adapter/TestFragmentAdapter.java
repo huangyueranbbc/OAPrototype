@@ -11,7 +11,7 @@ import system.oa.com.oaprototype.fragment.ReceiveFileFragment;
 import system.oa.com.oaprototype.fragment.SendFileFragment;
 
 public class TestFragmentAdapter extends FragmentPagerAdapter {
-    protected static final String[] CONTENT = new String[]{"发送文件", "接收文件"};
+    protected static final String[] CONTENT = new String[]{"接收文件", "发送文件"};
 
     private int mCount = CONTENT.length;
     private TextView textView; // 标题
@@ -25,9 +25,9 @@ public class TestFragmentAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         // 创建Fragment
         if (position == 0) {
-            return SendFileFragment.newInstance(CONTENT[position % CONTENT.length]);
-        } else {
             return ReceiveFileFragment.newInstance(CONTENT[position % CONTENT.length]);
+        } else {
+            return SendFileFragment.newInstance(CONTENT[position % CONTENT.length]);
         }
 
     }
